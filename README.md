@@ -16,17 +16,11 @@ Proof of Location Protocol(POLP) is the first ZK-powered solution for verifiable
 
 The Proof of Location Protocol (POLP) integrates advanced cryptographic techniques and cutting-edge decentralized systems to create a robust solution for secure and private location verification.
 
-#### ZK Coprocessor Architecture and Proof Circuits
+ 1. **ZK Coprocessor Architecture and Proof Circuits:** POLP employs a Zero-Knowledge (ZK) coprocessor architecture integrated with cryptographic proof circuits developed using snarkjs. This innovative setup enables the secure and efficient processing of location data using zk-SNARKs, ensuring confidentiality and integrity of proofs without exposing sensitive information.
 
-POLP employs a Zero-Knowledge (ZK) coprocessor architecture integrated with cryptographic proof circuits developed using snarkjs. This innovative setup enables the secure and efficient processing of location data using zk-SNARKs, ensuring confidentiality and integrity of proofs without exposing sensitive information.
+ 2. **GPS Integration:** Utilizing GPS technology, POLP ensures the acquisition of accurate and reliable location data, crucial for effective verification processes.
 
-#### GPS Integration
-
-Utilizing GPS technology, POLP ensures the acquisition of accurate and reliable location data, crucial for effective verification processes.
-
-#### ERC-721 Tokenization, IPFS, and Web3 Interoperability
-
-POLP leverages the ERC-721 standard to tokenize location proofs as unique non-fungible tokens (NFTs), which are stored on the InterPlanetary File System (IPFS). This decentralized storage solution enhances data security and accessibility, preventing centralized data breaches and ensuring robustness. The integration of ERC-721 with IPFS not only secures the integrity of location data but also guarantees POLP’s seamless interoperability across various Web3 protocols. This allows the protocol to serve a broad range of decentralized applications that require dependable location verification, from virtual real estate to complex metaverse environments.
+ 3. **ERC-721 Tokenization, IPFS, and Web3 Interoperability:** POLP leverages the ERC-721 standard to tokenize location proofs as unique non-fungible tokens (NFTs), which are stored on the InterPlanetary File System (IPFS). This decentralized storage solution enhances data security and accessibility, preventing centralized data breaches and ensuring robustness. The integration of ERC-721 with IPFS not only secures the integrity of location data but also guarantees POLP’s seamless interoperability across various Web3 protocols. This allows the protocol to serve a broad range of decentralized applications that require dependable location verification, from virtual real estate to complex metaverse environments.
 
 ## Application Scenarios
 
