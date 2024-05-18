@@ -2,7 +2,7 @@
 
 ## Overview
 
-Proof of Location Protocol(POLP) is the first decentralized protocol that enhances privacy in location services across Web3 ecosystems. Utilizing state-of-the-art Zero-Knowledge Proofs (ZKPs), POLP ensures that users can share and verify their geographical positions without exposing actual data, making it an ideal solution for privacy-conscious applications on blockchain platforms.
+Proof of Location Protocol(POLP) is the first ZK-powered solution for verifiable and trustworthy location privacy. It is interoperable with other protocols and can be used as foundational on-chain infrastructure to build protocols and services. Utilizing state-of-the-art Zero-Knowledge Proofs (ZKPs), POLP ensures that users can share and verify their geographical positions without exposing actual data, making it an ideal solution for privacy-conscious applications on blockchain platforms.
 
 ## Privacy Concerns
 
@@ -43,3 +43,9 @@ Geographically Tagged Transactions and Social Interactions: Ensures transactions
 #### 6. Blockchain-based Gaming and Entertainment Applications
 
 Location Check-ins and Game Interactions: Integrates into blockchain-based games and entertainment apps to provide geographically-based check-ins and tasks, thereby enhancing user engagement while ensuring privacy.
+
+## Future Enhanced Technologies
+
+ 1. **Hardware-Isolated Protection:** By processing all location-related data and zero-knowledge proof computations within a Trusted Execution Environment (TEE), the authenticity and security of data processing can be ensured. TEE provides a hardware-level security isolation for sensitive computations, protecting them from external system interference.
+
+ 2. **Multi-Source Data Sensing Computation:** By integrating data from GPS, Wi-Fi, Bluetooth, and other sensors, POLP can provide more accurate and reliable location verification in various environments. This multi-technology integration approach can automatically optimize the accuracy of location data both indoors and outdoors. For example, it can automatically switch to Wi-Fi and Bluetooth-based positioning methods indoors, while primarily using GPS data outdoors.
