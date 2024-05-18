@@ -1,22 +1,32 @@
-# DecentralizedLocationSharingSystem
+# Proof of Location Protocol - POLP
 
 ## Overview
 
 Proof of Location Protocol(POLP) is the first ZK-powered solution for verifiable and trustworthy location privacy. It is interoperable with other protocols and can be used as foundational on-chain infrastructure to build protocols and services. Utilizing state-of-the-art Zero-Knowledge Proofs (ZKPs), POLP ensures that users can share and verify their geographical positions without exposing actual data, making it an ideal solution for privacy-conscious applications on blockchain platforms.
 
-## Privacy Concerns
+## Existing Issues
 
-With the increasing use of location-based services, from navigation to geofencing, the need to protect sensitive location information has never been more critical. Traditional services collect and store precise user locations, posing significant privacy risks.
+ 1. **Privacy:** As the use of location-based services continues to grow, encompassing applications from navigation to geofencing, the imperative to safeguard sensitive location data has intensified. Encrypted ways and anonymization techniques are employed in some services, they typically still collect and store exact user locations in the form of single-point latitude and longitude coordinates, which poses substantial privacy risks. the data remains vulnerable to re-identification attacks due to the retention of spatial details in centralized databases. These databases create honeypots for malicious actors, compromising user privacy.
 
-## Existing Solutions
+ 2. **Unified Verification:** The lack of robust mechanisms or protocols like location signature proofs worse the problem, particularly in the Web3 ecosystem, where there is a crucial need for universally verifiable and traceable proofs of location. This gap highlights the necessity for a more secure and privacy-preserving approach in managing location data.
 
-Current solutions include basic anonymization techniques which can still leave data vulnerable to re-identification attacks, and private databases that centralize user data, creating honeypots for malicious actors.
+ 3. **Spoofing:** Compounding these issues is the persistent threat of location spoofing, where malicious entities manipulate GPS data or use emulators to deceive systems. Such activities not only undermine the integrity of services but also pose significant security challenges.
 
-## Implementation Highlights
+## How We Build It
 
-POLP incorporates a cutting-edge ZK coprocessor architecture to verify the presence of devices within a designated area securely and privately, without revealing their exact coordinates. This powerful feature ensures that location data remains confidential while still providing the necessary proof of presence to the required services.
+The Proof of Location Protocol (POLP) integrates advanced cryptographic techniques and cutting-edge decentralized systems to create a robust solution for secure and private location verification.
 
-It utilizes dynamic cryptographic models which are adapted in real-time based on contextual data and threat assessments. This adaptive approach not only enhances the security and efficiency of the proofs but also ensures that the protocol remains robust against evolving security threats. Additionally, POLP's design allows for seamless interoperability with other protocols, making it a versatile foundation for developing applications that address critical privacy concerns in location-based services.
+#### ZK Coprocessor Architecture and Proof Circuits
+
+POLP employs a Zero-Knowledge (ZK) coprocessor architecture integrated with cryptographic proof circuits developed using snarkjs. This innovative setup enables the secure and efficient processing of location data using zk-SNARKs, ensuring confidentiality and integrity of proofs without exposing sensitive information.
+
+#### GPS Integration
+
+Utilizing GPS technology, POLP ensures the acquisition of accurate and reliable location data, crucial for effective verification processes.
+
+#### ERC-721 Tokenization, IPFS, and Web3 Interoperability
+
+POLP leverages the ERC-721 standard to tokenize location proofs as unique non-fungible tokens (NFTs), which are stored on the InterPlanetary File System (IPFS). This decentralized storage solution enhances data security and accessibility, preventing centralized data breaches and ensuring robustness. The integration of ERC-721 with IPFS not only secures the integrity of location data but also guarantees POLP’s seamless interoperability across various Web3 protocols. This allows the protocol to serve a broad range of decentralized applications that require dependable location verification, from virtual real estate to complex metaverse environments.
 
 ## Application Scenarios
 
