@@ -2,7 +2,7 @@
 
 ## Overview
 
-Proof of Location Protocol(POLP) is the first ZK-powered solution for verifiable and trustworthy location privacy. It is interoperable with other protocols and can be used as foundational on-chain infrastructure to build protocols and services. Utilizing state-of-the-art Zero-Knowledge Proofs (ZKPs), POLP ensures that users can share and verify their geographical positions without exposing actual data, making it an ideal solution for privacy-conscious applications on blockchain platforms.
+Proof of Location Protocol (POLP) is the first ZK-powered solution providing verifiable and trustworthy privacy for location proofs. It is interoperable with other protocols and can be used as foundational on-chain infrastructure to build protocols and services. Utilizing state-of-the-art Zero-Knowledge Proofs (ZKPs), POLP ensures that users can share and verify their geographical positions without exposing actual data, making it an ideal solution for privacy-conscious applications on blockchain platforms.
 
 ## Existing Issues
 
@@ -14,7 +14,7 @@ Proof of Location Protocol(POLP) is the first ZK-powered solution for verifiable
 
 ## How We Build It
 
-The Proof of Location Protocol (POLP) integrates advanced cryptographic techniques and cutting-edge decentralized systems to create a robust solution for secure and private location verification.
+POLP integrates advanced cryptographic techniques and cutting-edge decentralized systems to create a robust solution for secure and private location verification.
 
  1. **ZK Coprocessor Architecture and Proof Circuits:** POLP employs a Zero-Knowledge (ZK) coprocessor architecture integrated with cryptographic proof circuits developed using snarkjs. This innovative setup enables the secure and efficient processing of location data using zk-SNARKs, ensuring confidentiality and integrity of proofs without exposing sensitive information.
 
