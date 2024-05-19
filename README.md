@@ -54,6 +54,14 @@ Location Check-ins and Game Interactions: Integrates into blockchain-based games
 
 2.  **Multi-Source Data Sensing Computation:** By integrating data from GPS, Wi-Fi, Bluetooth, and other sensors, POLP can provide more accurate and reliable location verification in various environments. This multi-technology integration approach can automatically optimize the accuracy of location data both indoors and outdoors. For example, it can automatically switch to Wi-Fi and Bluetooth-based positioning methods indoors, while primarily using GPS data outdoors.
 
+## Demo Link
+
+- [POLP Website](https://decentralized-location-frontend.vercel.app)
+
+## Demo Video
+
+- Youtube:
+
 ## Contract
 
 ### Contract Address
