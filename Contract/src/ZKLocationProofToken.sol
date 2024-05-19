@@ -1,14 +1,16 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
-import "./Verifier.sol"; // TODO
 
+// Interface to PlonkVerifier.sol
+interface IPlonkVerifier {
+    function verifyProof(bytes memory proof, uint[] memory pubSignals) external view returns (bool);
+}
 
-contract ZKLocationProofToken is ERC721, Verifier {
-    using Counters for Counters.Counter;
-    Counters.Counter private _tokenIdCounter;
+contract ZKLocationProofToken is ERC721 {
+    uint256 private _tokenIdCounter;
+    address public s_plonkVerifierAddress;
 
     struct LocationProof {
         string ipfsCid; // IPFS CID storing the proof metadata
@@ -21,27 +23,25 @@ contract ZKLocationProofToken is ERC721, Verifier {
     // Mapping from owner address to list of owned token IDs
     mapping(address => uint256[]) private _ownedTokens;
 
-    event ProofTokenCreated(uint256 indexed tokenId, string ipfsCid);
+    event ProofResult(bool result);
 
-    constructor() ERC721("ZKLocationProofToken", "ZKPT") {}
+    constructor(address plonkVerifierAddress) ERC721("ZKLocationProofToken", "ZKPT") {
+        s_plonkVerifierAddress = plonkVerifierAddress;
+    }
 
-    function mintProof(
-        uint256[2] memory a,
-        uint256[2][2] memory b,
-        uint256[2] memory c,
-        uint256[] memory input,
-        string memory ipfsCid
-    ) public {
-        require(verifyProof(a, b, c, input), "Invalid zk-proof provided.");
+    // ZK proof is generated in the browser and submitted as a transaction w/ the proof as bytes.
+    function submitProof(bytes memory proof, uint256[] memory pubSignals, string memory ipfsCid) public returns (bool) {
+        bool result = IPlonkVerifier(s_plonkVerifierAddress).verifyProof(proof, pubSignals);
+        emit ProofResult(result);
 
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
-
+        uint256 tokenId = _tokenIdCounter;
         _locationProofs[tokenId] = LocationProof(ipfsCid, block.timestamp);
         _mint(msg.sender, tokenId);
         _ownedTokens[msg.sender].push(tokenId);
 
-        emit ProofTokenCreated(tokenId, ipfsCid);
+        _tokenIdCounter += 1;
+
+        return result;
     }
 
     function getProof(uint256 tokenId) public view returns (LocationProof memory) {
@@ -56,7 +56,7 @@ contract ZKLocationProofToken is ERC721, Verifier {
     function getAllProofDetails(address owner) public view returns (LocationProof[] memory) {
         uint256[] memory tokenIds = getOwnedProofs(owner);
         LocationProof[] memory proofs = new LocationProof[](tokenIds.length);
-        
+
         for (uint i = 0; i < tokenIds.length; i++) {
             proofs[i] = getProof(tokenIds[i]);
         }
