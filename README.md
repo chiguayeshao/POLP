@@ -60,7 +60,7 @@ Location Check-ins and Game Interactions: Integrates into blockchain-based games
 
 ## Demo Video
 
-- Youtube:
+- Youtube: https://www.youtube.com/watch?v=nQKpvzuP3yc
 
 ## Contract
 
