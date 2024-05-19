@@ -58,7 +58,7 @@ Location Check-ins and Game Interactions: Integrates into blockchain-based games
 
 ### Contract Address
 
-- Repositories: [GitHub](https://github.com/chiguayeshao/POLP/tree/main/contract)
+- Repositories: [GitHub](https://github.com/chiguayeshao/POLP/tree/main/Contract)
 
 - Contract Address in Sepolia: [0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a](https://sepolia.etherscan.io/address/0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a)
 - Contract Address in Scroll: [0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a](https://sepolia.scrollscan.com/0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a)
