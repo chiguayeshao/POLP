@@ -1,0 +1,35 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ZKLocationProofToken
+    network: scroll-sepolia
+    source:
+      address: "0xaDA091B8B909cCb409462295539dA6e30De05F9a"
+      abi: ZKLocationProofToken
+      startBlock: 4329418
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - ProofResult
+        - Transfer
+      abis:
+        - name: ZKLocationProofToken
+          file: ./abis/ZKLocationProofToken.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: ProofResult(bool)
+          handler: handleProofResult
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/zk-location-proof-token.ts
