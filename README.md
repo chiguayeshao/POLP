@@ -71,6 +71,10 @@ Location Check-ins and Game Interactions: Integrates into blockchain-based games
 - Contract Address in Sepolia: [0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a](https://sepolia.etherscan.io/address/0x11f51b05e6ec6ff477821f7ac3379c77c8d6339a)
 - Contract Address in Scroll: [0xaDA091B8B909cCb409462295539dA6e30De05F9a](https://sepolia.scrollscan.com/address/0xada091b8b909ccb409462295539da6e30de05f9a)
 
+### The Graph
+
+- Subgraph: https://thegraph.com/explorer/subgraphs/5xFYY5fP4THWoxcCk1LbsArzPGKJGehKz5tRk7yfFGts
+
 ## Frontend:
 
 - [GitHub](https://github.com/chiguayeshao/decentralized_location_frontend)
